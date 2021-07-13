@@ -19,9 +19,9 @@ The app opens with the main window where you will find:
    * This button allows you to see only completed tasks
   #### Incomplete:
    * This button allows you to see only incomplete items 
-### Remove Task:
+### Remove Task Button:
   * By clicking this button, you can remove the task that you have selected
-### Clear Task:
+### Clear Task Button:
   * By clicking this button, you can clear all tasks
 ### File drop down menu:
   This menu contains:
