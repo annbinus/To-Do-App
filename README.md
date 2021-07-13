@@ -14,11 +14,11 @@ The app opens with the main window where you will find:
 ### Show Drop down menu:
   This menu contains:
   #### All:
-   * This button allows you to see all tasks
+   * This menu item allows you to see all tasks
   #### Complete:
-   * This button allows you to see only completed tasks
+   * This menu item allows you to see only completed tasks
   #### Incomplete:
-   * This button allows you to see only incomplete items 
+   * This menu item allows you to see only incomplete tasks 
 ### Remove Task Button:
   * By clicking this button, you can remove the task that you have selected
 ### Clear Task Button:
