@@ -16,7 +16,7 @@ The app opens with the main window where you will find:
   #### All:
    * This button allows you to see all tasks
   #### Complete:
-   * This button allows you to see only completes tasks
+   * This button allows you to see only completed tasks
   #### Incomplete:
    * This button allows you to see only incomplete items 
 ### Remove Task:
