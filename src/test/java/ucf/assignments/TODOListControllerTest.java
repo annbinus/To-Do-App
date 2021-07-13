@@ -6,72 +6,67 @@ package ucf.assignments;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class TODOListControllerTest {
 
-    @Test
-    void addItem() {
-        //when clicked on add item button, console returns true
+    List list = new List("My New List",100); //initialize todolist
+
+    private void newItemData() throws FileNotFoundException {
+        //create a file to scan input from user
+        File file = new File("files/test.txt");
+        Scanner scan = new Scanner(file);
+
+        //add data from file to string array
+        while (scan.hasNext()) {
+            String data = scan.nextLine();
+            String[] item = data.split(",");
+            list.addItem(new Item(item[0], item[1], item[2]));
+        }
     }
 
     @Test
-    void addList() {
-        //when clicked on add list button, console returns true
+    void showAllItems()  {
+        try {
+            newItemData();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        assertEquals(8,list.count);
     }
 
     @Test
-    void completeItem() {
-        //when clicked on show complete list button, console returns true
+    void showIncompleteItems()  {
+        try {
+            newItemData();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        assertEquals(5, list.getIncompleteItems().size());
     }
 
     @Test
-    void editItem() {
-        //when clicked on edit item button, console returns true
+    void showCompleteItems()  {
+        try {
+            newItemData();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        assertEquals(3, list.getCompleteItems().size());
     }
 
     @Test
-    void editList() {
-        //when clicked on edit list button, console returns true
-    }
-
-    @Test
-    void IncompleteItem() {
-        //when clicked on show incomplete list button, console returns true
-    }
-
-    @Test
-    void openList() {
-        //when clicked on open list from the file menu, console returns true
-    }
-
-    @Test
-    void openMultipleList() {
-        //when clicked on open multiple list from file menu, console returns true
-    }
-
-    @Test
-    void removeItem() {
-        //when clicked on remove item button, console returns true
-    }
-
-    @Test
-    void removeList() {
-        //when clicked on remove list button, console returns true
-    }
-
-    @Test
-    void saveAllList() {
-        //when clicked on save all list from file menu, console returns true
-    }
-
-    @Test
-    void saveList() {
-        //when clicked on save list from file menu, console returns true
-    }
-
-    @Test
-    void setDate() {
-        //when clicked on date picker, console returns true
+    void clearAllItems()  {
+        try {
+            newItemData();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        list.clearAllItems();
+        assertEquals(0, list.getItems().size());
     }
 }
