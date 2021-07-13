@@ -4,92 +4,130 @@
 class TODOList{
 -start()
 -main()
+-stop()
 }
 
 class TODOListController{
 
-+AddItem()
-+AddList()
-+RemoveItem()
-+RemoveList()
-+EditItem()
-+EditList()
-+IncompleteItem()
-+CompleteItem()
-+OpenList()
-+OpenMultipleList()
-+SaveList()
-+SaveAllList()
-+setDate()
+-List myToDoList
+
+-TableView<Item> tableView
+-TableColumn<Item, String> desc
+-TableColumn<Item, String> dueDate
+-TableColumn<Item, String> status
+
+-Label storage
+
+-MenuItem showAll
+-MenuItem showComplete
+-MenuItem showIncomplete
+
+-Button removeButton
+
+-MenuItem fileUpload
+-MenuItem fileDownload
+
++editDescription()
++editDueDate()
++editStatus()
+
++showAllItems()
++showIncompleteItems()
++showCompleteItems()
+
++clear()
++getList()
+
++openFile()
+
++setCellFactory()
++setTableCellEditable()
+
++handleAddButton()
++handleRemoveButton()
++handleFileOpen()
++handleFileDownload()
+
++initialize()
+
 }
 
 class List{
--String name
--ArrayList<Item> ItemList
 
-+setDescription()
-+getDescription()
+-String title
+-int storage
+
+-int count
+
+-ArrayList<Item> itemList
+
++List()
 
 +addItem()
 +removeItem()
 
-+getList()
-+completedItemList()
++getTitle()
++setTitle()
 
-+sortItem()
++getBalance()
++setBalance()
+
++editTitle()
+
++clearAllItems()
+
++editDescription()
++editDueDate()
++editStatus()
+
++getItems()
++getCompleteItems()
++getIncompleteItems()
 
 }
 
 class Item{
 -String description
--Boolean status
--String date
+-String dueDate
+-String status;
 
-+setDescription()
++Item()
+
 +getDescription()
++setDescription()
 
-+setDate()
-+getDate()
++getDueDate()
++setDueDate()
 
++getStatus()
 +setStatus()
 
-+getItem()
-+getCompletedItem()
++toString()
 
 }
 
-class File{
+class ItemController{
 
-+setFileName()
-+getFileNAme()
+DatePicker date
+TextArea description
+Button addTaskButton
 
-+setFilePath()
-+getFilePath()
-
-+loadFile()
-+saveFile()
-
-+loadList()
-+saveList()
-}
-
-class ListArray{
--ArrayList<List> allList
-+addList()
-+removeList()
++addTask()
++initialize()
 
 }
 
-Item -- TODOListController
-ListArray -- TODOListController
-File -- TODOListController
 
+Javafx.Application <|-- TODOList
 
-TODOList <--|> File
-ListArray <|-- File
-List <|-- File
-Item <|-> List
-List <|-> ListArray
+TODOList <|-- TODOListController
+List - TODOListController
+
+TODOList --> List
+List --> Item
+
+TODOListController <-- ItemController
+ItemController <-- Item
 
 
 

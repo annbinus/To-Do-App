@@ -4,13 +4,11 @@
  */
 package ucf.assignments;
 
-import javafx.collections.ArrayChangeListener;
-
 import java.util.ArrayList;
 
 public class List {
 
-    private String title;
+    private final String title;
     private int storage;
 
     public int count;
@@ -45,21 +43,10 @@ public class List {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public int getBalance() {
         return storage-count;
     }
 
-    public void setCapacity(int capacity) {
-        this.storage = capacity;
-    }
-
-    public void editTitle(String newTitle){
-        this.title = newTitle;
-    }
 
     public void clearAllItems(){
         //reset the Item ArrayList
