@@ -50,7 +50,7 @@
         </MenuBar>
         <Button fx:id="addButton" layoutX="14.0" layoutY="84.0" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="25.0" prefWidth="83.0" text="Add" />
         <Button layoutX="809.0" layoutY="424.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="206.0" text="Clear Task..." />
-        <Button layoutX="653.0" layoutY="84.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="53.0" text="Sort" />
+        <Button layoutX="653.0" layoutY="84.0" mnemonicParsing="false" onAction="#handeSortButton" prefHeight="25.0" prefWidth="53.0" text="Sort" />
         <Separator layoutY="69.0" prefHeight="12.0" prefWidth="1027.0" />
         <Separator layoutX="793.0" layoutY="75.0" orientation="VERTICAL" prefHeight="487.0" prefWidth="20.0" />
         <Label fx:id="storage" layoutX="813.0" layoutY="187.0" prefHeight="46.0" prefWidth="200.0" text="Storage Left: " />

@@ -323,5 +323,13 @@ public class TODOListController implements Initializable {
     }
 
 
-
+    public void handeSortButton(ActionEvent actionEvent) {
+        tableView.getItems().sort((row1, row2)->{
+            if(row1.equals(row2)) return 0;
+            if(row1.getDueDate().compareTo(row2.getDueDate()) > 0)
+                return 1;
+            else
+                return 0;
+        });
+    }
 }
