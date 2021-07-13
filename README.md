@@ -4,7 +4,7 @@
 
 **Please read**
 
-# Welcome to To-Do App
+# To-Do App
 This app can be used to manage your tasks.
 
 ## Main Window Instructions: 
