@@ -1,0 +1,96 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class TODOList{
+-start()
+-main()
+}
+
+class TODOListController{
+
++AddItem()
++AddList()
++RemoveItem()
++RemoveList()
++EditItem()
++EditList()
++IncompleteItem()
++CompleteItem()
++OpenList()
++OpenMultipleList()
++SaveList()
++SaveAllList()
++setDate()
+}
+
+class List{
+-String name
+-ArrayList<Item> ItemList
+
++setDescription()
++getDescription()
+
++addItem()
++removeItem()
+
++getList()
++completedItemList()
+
++sortItem()
+
+}
+
+class Item{
+-String description
+-Boolean status
+-String date
+
++setDescription()
++getDescription()
+
++setDate()
++getDate()
+
++setStatus()
+
++getItem()
++getCompletedItem()
+
+}
+
+class File{
+
++setFileName()
++getFileNAme()
+
++setFilePath()
++getFilePath()
+
++loadFile()
++saveFile()
+
++loadList()
++saveList()
+}
+
+class ListArray{
+-ArrayList<List> allList
++addList()
++removeList()
+
+}
+
+Item -- TODOListController
+ListArray -- TODOListController
+File -- TODOListController
+
+
+TODOList <--|> File
+ListArray <|-- File
+List <|-- File
+Item <|-> List
+List <|-> ListArray
+
+
+
+@enduml
