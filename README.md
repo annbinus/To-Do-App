@@ -1,6 +1,6 @@
-# binus_cop3330_assignment4part2
+# binus-cop3330-assignment4part2
 
-*This project is dedicated to Rey!*
+This project is dedicated to Rey.
 
 **Please read**
 
