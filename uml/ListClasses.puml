@@ -48,6 +48,8 @@ class TODOListController{
 +handleFileOpen()
 +handleFileDownload()
 
++ handleSortButton()
+
 +initialize()
 
 }
