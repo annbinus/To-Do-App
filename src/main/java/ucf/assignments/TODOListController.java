@@ -180,7 +180,7 @@ public class TODOListController implements Initializable {
         tableView.getItems().setAll(myToDoList.getItems());
 
         // shows the remaining storage
-        storage.setText("Storage Left: " + myToDoList.getTitle());
+        storage.setText("Storage Left: " + myToDoList.getBalance());
 
         tableView.setEditable(true);
 
