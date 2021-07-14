@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class List {
 
-    private final String title;
+    private  String title;
     private int storage;
 
     public int count;
@@ -43,8 +43,16 @@ public class List {
         return title;
     }
 
+    public void setTitle(String title){
+        this.title = title;
+    }
+
     public int getBalance() {
         return storage-count;
+    }
+
+    public void setBalance(int storage){
+        this.storage = storage;
     }
 
 
