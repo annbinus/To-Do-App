@@ -112,7 +112,7 @@ class ListTest {
     }
 
     @Test
-    void editStatisTest() throws FileNotFoundException {
+    void editStatusTest() {
         load();
         //create Item item object
         Item item = list.getItems().get(0);
